@@ -21,6 +21,7 @@ repo sync -j80
 
 # add trees
 git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_m10lte vendor/samsung/m10lte
+git clone --depth=1 https://github.com/youssefnone/android_kernel_samsung_m10lte kernel/samsung/m10lte
+git clone --depth=1 https://github.com/youssefnone/android_device_samsung_m10lte device/samsung/m10lte
 . build/envsetup.sh
 brunch m10lte
-make vendor
