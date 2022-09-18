@@ -16,7 +16,7 @@ git config --global user.name "Your Name"
 # sync carbon rom
 mkdir -p ~/carbon
 cd ~/carbon
-repo init --depth=1 -u https://github.com/CarbonROM/android.git -b cr-8.0
+repo init --depth=1 -u https://github.com/crdroidandroid/android -b 10.0-20211216
 repo sync -j80
 
 # add trees
