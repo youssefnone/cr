@@ -26,7 +26,7 @@ echo "============================"
 cd out/target/product/generic
 
 # Set FILENAME var
-FILENAME=vendor-qemu.img
+FILENAME=$(echo $OUTPUT)
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
@@ -56,9 +56,7 @@ DATE_S=$(date +"%T")
 echo -e \
 "
 🦊 OrangeFox Recovery CI
-
 ✅ Build Completed Successfully!
-
 📱 Device: "${DEVICE}"
 🖥 Build System: "${FOX_BRANCH}"
 ⬇️ Download Link: <a href=\"${DL_LINK}\">Here</a>
@@ -74,3 +72,4 @@ echo " "
 
 # Exit
 exit 0
+
