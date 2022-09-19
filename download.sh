@@ -13,19 +13,18 @@ sudo ln -sf ~/bin/repo /usr/bin/repo
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
-# sync lineage os
-mkdir -p ~/lineageos
+# sync rom
+mkdir -p ~/rom
 cd ~/carbon
-repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
+repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
 repo sync
 
 # add trees
 git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_m10lte vendor/samsung/m10lte
-git clone --depth=1 https://github.com/youssefnone/android_kernel_samsung_m10lte kernel/samsung/m10lte
-git clone --depth=1 https://github.com/youssefnone/android_device_samsung_m10lte device/samsung/m10lte
-. build/envsetup.sh
-breakfast m10lte
-export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m"
-croot
-brunch m10lte
+git clone --depth=1 https://github.com/samsungexynos7870/android_vendor_samsung_universal7870-common vendor/samsung/universal7870-common
 
+
+# build
+. build/vendorsetup.sh
+
+make vendorimage
