@@ -27,3 +27,5 @@ git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_univer
 . build/envsetup.sh
 brunch m10lte
 make vendorimage
+
+ls out/target/product/generic
