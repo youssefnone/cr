@@ -23,10 +23,10 @@ echo "Uploading the Build..."
 echo "============================"
 
 # Change to the Output Directory
-cd out/target/product/${DEVICE}
+cd out/target/product/generic
 
 # Set FILENAME var
-FILENAME=$(echo $OUTPUT)
+FILENAME=vendor.img
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
