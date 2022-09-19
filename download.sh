@@ -26,5 +26,5 @@ git clone --depth=1 https://github.com/samsungexynos7870/android_vendor_samsung_
 
 # build
 . build/vendorsetup.sh
-
+brunch m10lte
 make vendorimage
