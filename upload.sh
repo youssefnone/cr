@@ -26,7 +26,7 @@ echo "============================"
 cd out/target/product/generic
 
 # Set FILENAME var
-FILENAME=vendor.img
+FILENAME=vendor-qemu.img
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
