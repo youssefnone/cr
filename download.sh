@@ -15,7 +15,7 @@ git config --global user.name "Your Name"
 
 # sync rom
 mkdir -p ~/rom
-cd ~/carbon
+cd ~/rom
 repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
 repo sync
 
