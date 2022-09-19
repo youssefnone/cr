@@ -24,6 +24,6 @@ git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_m10lte
 git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_universal7870-common -b common vendor/samsung/universal7870-common
 
 # build
-. build/vendorsetup.sh
+. build/envsetup.sh
 brunch m10lte
 make vendorimage
