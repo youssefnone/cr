@@ -26,7 +26,7 @@ git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_univer
 
 # build
 . build/envsetup.sh
-make vnod
+make vendor
 
 TIMEOUT=20160
 cd ~/rom
