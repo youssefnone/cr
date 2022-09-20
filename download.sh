@@ -17,22 +17,17 @@ git config --global user.name "Your Name"
 cd
 mkdir rom
 cd rom
-repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
-repo sync
+repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
+git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git .repo/local_manifests
+repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
+. build/envsetup.sh && lunch lineage_m10lte-userdebug && mka clean && mka api-stubs-docs && mka hiddenapi-lists-docs && mka system-api-stubs-docs && mka test-api-stubs-docs && mka bacon -j`nproc`
 
-# add trees
-git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_m10lte vendor/samsung/m10lte
-git clone --depth=1 https://github.com/youssefnone/android_vendor_samsung_universal7870-common -b common vendor/samsung/universal7870-common
-
-# build
-. build/envsetup.sh
-make vendor
 
 TIMEOUT=20160
 cd ~/rom
 ls out/target/product/generic
-zip vendor.zip out/target/product/generic/vendor.img
-export OUTPUT="vendor.zip"
+zip lineage.zip out/target/product/generic/lineage*zip
+export OUTPUT="lineage.zip"
 FILENAME=$(echo $OUTPUT)
 
 # Upload to WeTransfer
