@@ -7,8 +7,8 @@ task:
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 9
-      memory: 32G
+      cpu: 8
+      memory: 33G
 
   Sync_script:
       - curl -sL https://raw.githubusercontent.com/youssefnone/cr/main/download.sh | bash
