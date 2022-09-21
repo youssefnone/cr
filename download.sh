@@ -20,7 +20,7 @@ cd rom
 repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
 git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git .repo/local_manifests
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
-. build/envsetup.sh && lunch lineage_m10lte-userdebug && mka clean && mka api-stubs-docs && mka hiddenapi-lists-docs && mka system-api-stubs-docs && mka test-api-stubs-docs && mka bacon -j`nproc`
+. build/envsetup.sh && lunch lineage_m10lte-userdebug && mka clean && mka api-stubs-docs && mka hiddenapi-lists-docs && mka system-api-stubs-docs && mka test-api-stubs-docs && mka bacon -j6
 
 
 TIMEOUT=20160
