@@ -26,7 +26,7 @@ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimiz
 TIMEOUT=20160
 cd ~/rom
 ls out/target/product/m10lte
-zip lineage.zip out/target/product/m10lte/lineage*zip
+zip lineage.zip out/error.log
 export OUTPUT="lineage.zip"
 FILENAME=$(echo $OUTPUT)
 
