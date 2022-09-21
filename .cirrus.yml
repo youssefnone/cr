@@ -4,7 +4,7 @@ env:
 
 task:
   name: "Builder"
-  timeout_in: 480m
+  timeout_in: 680m
   container:
       image: ghcr.io/sushrut1101/docker:arch
       cpu: 8
