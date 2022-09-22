@@ -3,7 +3,7 @@ env:
     CIRRUS_SHELL: bash
 
 task:
-  name: "Builder"
+  name: "Build"
   timeout_in: 180m
   container:
       image: ghcr.io/sushrut1101/docker:arch
