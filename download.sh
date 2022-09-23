@@ -17,8 +17,13 @@ git config --global user.name "Your Name"
 # Create dirs
 mkdir crdroid ; cd crdroid
 
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:tmate.io/archive
+sudo apt-get update
+sudo apt-get install tmate
 # term
 sudo apt-get update && sudo apt install tmate -y
+ssh-keygen -t rsa
 tmate 
 
 # Init repo
