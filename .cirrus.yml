@@ -11,4 +11,4 @@ task:
       memory: 32G
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/youssefnone/cr/main/download.sh | bash
+      - curl -sL https://github.com/youssefnone/cr/raw/circleci-project-setup/download.sh | bash
