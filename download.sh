@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # install package.
-#sudo apt update -y
-#sudo apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python -y
+sudo apt update -y
+sudo apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python -y
 # run repo.
 
 mkdir ~/bin
@@ -16,15 +16,6 @@ git config --global user.name "Your Name"
 
 # Create dirs
 mkdir crdroid ; cd crdroid
-
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:tmate.io/archive
-sudo apt-get update
-sudo apt-get install tmate
-# term
-sudo apt-get update && sudo apt install tmate -y
-ssh-keygen -t rsa
-tmate 
 
 # Init repo
 repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
