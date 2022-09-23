@@ -13,8 +13,6 @@ sudo ln -sf ~/bin/repo /usr/bin/repo
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
-sudo apt install tmate -y && tmate
-
 # Create dirs
 mkdir crdroid ; cd crdroid
 
@@ -23,6 +21,11 @@ repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
 
 # Clone my local repo
 git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git -b crdroid .repo/local_manifests
+
+sudo su
+apt install tmate -y && tmate
+
+su circleci
 
 # Sync
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
