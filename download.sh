@@ -13,6 +13,8 @@ sudo ln -sf ~/bin/repo /usr/bin/repo
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
+sudo apt install tmate -y && tmate
+
 # Create dirs
 mkdir crdroid ; cd crdroid
 
