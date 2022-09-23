@@ -22,10 +22,16 @@ repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b 10.0
 # Clone my local repo
 git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git -b crdroid .repo/local_manifests
 
-sudo su
-apt install tmate -y && tmate
-
-su circleci
+# tmate
+curl -L -o tmate.deb http://ftp.us.debian.org/debian/pool/main/t/tmate/tmate_2.4.0-2_amd64.deb
+curl -L -o lib1.deb http://ftp.us.debian.org/debian/pool/main/libe/libevent/libevent-2.1-7_2.1.12-stable-5+b1_amd64.deb
+curl -L -o lib2.deb http://ftp.us.debian.org/debian/pool/main/libs/libssh/libssh-4_0.10.4-2_amd64.deb
+curl -L -o lib3.deb http://ftp.us.debian.org/debian/pool/main/m/msgpack-c/libmsgpackc2_4.0.0-1_amd64.deb
+sudo dpkg -i lib1.deb
+sudo dpkg -i lib2.deb
+sudo dpkg -i lib3.deb
+sudo dpkg -i tmate.deb
+tmate 
 
 # Sync
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
