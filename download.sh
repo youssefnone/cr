@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install package.
-apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python -y
+# apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip python -y
 # run repo.
 
 mkdir ~/bin
@@ -26,7 +26,7 @@ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimiz
 TIMEOUT=20160
 cd ~/rom
 ls out/target/product/m10lte
-zip lineage.zip out/error.log
+zip lineage.zip out/target/product/m10lte/*zip
 export OUTPUT="lineage.zip"
 FILENAME=$(echo $OUTPUT)
 
