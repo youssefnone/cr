@@ -1,6 +1,6 @@
 cd crdroid
 . build/envsetup.sh
-lunch lineage-m10lte_userdebug
+lunch lineage_m10lte-userdebug
 mka vendorimage
 mka bootimage
 mka bacon
