@@ -27,7 +27,7 @@ git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git -b 
 repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
 
 # Build
-. build/envsetup.sh && lunch carbon_m10lte-eng && mka clean && mka bacon -j`nproc`
+. build/envsetup.sh && lunch carbon_m10lte-eng && mka clean && mka carbon -j`nproc`
 
 TIMEOUT=20160
 ls out/target/product/m10lte
