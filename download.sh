@@ -18,7 +18,7 @@ git config --global user.name "Your Name"
 mkdir crdroid ; cd crdroid
 
 # Init repo
-repo init --depth=1 -u https://github.com/crdroidandroid/android.git -b cr-9.0
+repo init --depth=1 -u https://github.com/CarbonROM/android.git -b cr-9.0
 
 # Clone my local repo
 git clone https://github.com/youssefnone/android_manifest_samsung_m10lte.git -b cr-9.0 .repo/local_manifests
